@@ -118,7 +118,7 @@ class Blockchain:
         parsed_url = urlparse(address)
         self.nodes.add(parsed_url.netloc)
 
-    #　Replace the current chain if there is a new
+    # Replace the current chain if there is a new
     # longest chain in the network
     #
     # output: True if the current chain was replaced, otherwise False
