@@ -129,7 +129,7 @@ class Blockchain:
         # check each nodes in network
         for node in network:
             # send request to get chain from each nodes
-            response = requests.get(f'http://{node}/get_chain')
+            response = requests.get(f'https://{node}/get_chain')
 
             if response.status_code == 200:
                 length = response.json()['length']
@@ -242,6 +242,6 @@ def replace_chain():
     return jsonify(response), 200
 
 # Run app
-app.run(host = '0.0.0.0', port = 5000)
+app.run(host = '0.0.0.0', port = 5000, ssl_context='adhoc')
 
 
