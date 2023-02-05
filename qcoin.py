@@ -241,6 +241,11 @@ def replace_chain():
                     'length': len(blockchain.chain)}
     return jsonify(response), 200
 
+# For testing
+@app.route('/')
+def test():
+    return 'The app works!'
+
 # Run app
 app.run(host = '0.0.0.0', port = 5000, ssl_context='adhoc')
 
